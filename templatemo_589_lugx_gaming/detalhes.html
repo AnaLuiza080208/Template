@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Ana Luiza - Perfil</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .profile-header {
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .badge-skill {
+            background-color: #fd79a8;
+            color: white;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #6c5ce7;
+        }
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            bottom: -25px;
+            width: 1px;
+            background-color: #ddd;
+        }
+        .last-item::after {
+            display: none;
+        }
+        
+        /* Novos estilos para distribuição */
+        .dual-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .left-column, .right-column {
+            width: 48%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .left-column, .right-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="shop.html">Nossa Loja</a></li>
+                        <li><a href="detalhes.html">Sobre nós</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="login.html">Entrar</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Meu Perfil</h3>
+          <span class="breadcrumb"><a href="index.html">Início</a> > Perfil</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-product section">
+    <div class="container">
+      <div class="profile-header">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center">
+            <h4>Ana Luiza</h4>
+            <p>Estudante | Técnico em Informática</p>
+          </div>
+          <div class="col-md-9">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou Ana Luiza, uma estudante de 17 anos de Cascavel apaixonada por tecnologia e desenvolvimento web. Atualmente cursando o Ensino Médio integrado ao Técnico em Informática no IFPR, onde estou desenvolvendo minhas habilidades técnicas e descobrindo novas possibilidades na área da computação.</p>
+            
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <p><i class="fas fa-birthday-cake me-2"></i> <strong>Idade:</strong> 17 anos</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Cidade:</strong> Cascavel, PR</p>
+              </div>
+              <div class="col-md-6">
+                <p><i class="fas fa-graduation-cap me-2"></i> <strong>Instituição:</strong> IFPR - Campus Cascavel</p>
+                <p><i class="fas fa-heart me-2"></i> <strong>Interesses:</strong> Desenvolvimento Web, Programação</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dual-column mt-5">
+        <!-- Coluna da Esquerda -->
+        <div class="left-column">
+          <div class="section-heading">
+            <h6>Minhas Habilidades</h6>
+            <h2>O Que Eu Sei Fazer</h2>
+          </div>
+          
+          <div class="skills mb-5">
+            <h5>Técnicas</h5>
+            <div>
+              <span class="badge-skill"><i class="fas fa-code me-1"></i> HTML/CSS</span>
+              <span class="badge-skill"><i class="fab fa-js me-1"></i> JavaScript</span>
+              <span class="badge-skill"><i class="fas fa-database me-1"></i> MySQL</span>
+              <span class="badge-skill"><i class="fab fa-java me-1"></i> Java Básico</span>
+            </div>
+            
+            <h5 class="mt-4">Pessoais</h5>
+            <div>
+              <span class="badge-skill"><i class="fas fa-users me-1"></i> Trabalho em equipe</span>
+              <span class="badge-skill"><i class="fas fa-lightbulb me-1"></i> Criatividade</span>
+              <span class="badge-skill"><i class="fas fa-comments me-1"></i> Boa comunicação</span>
+              <span class="badge-skill"><i class="fas fa-book me-1"></i> Aprendizado rápido</span>
+            </div>
+          </div>
+          
+          <div class="section-heading">
+            <h6>Meus Projetos</h6>
+            <h2>Trabalhos Recentes</h2>
+          </div>
+          
+          <div class="projects">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Iniciação em Robótica</h5>
+                <p class="card-text">Participação em projeto de robótica educacional no IFPR no primeiro ano, desenvolvendo noções básicas de programação de robôs e eletrônica com Arduino.</p>
+                <div class="project-details">
+                  <span class="badge bg-primary">Arduino</span>
+                  <span class="badge bg-secondary">Lógica de Programação</span>
+                  <span class="badge bg-success">2023</span>
+                  <p>(Projeto abandonado)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Visita à Latonoware</h5>
+                <p class="card-text">Visita para conhecer na feira de tecnologia Latonoware 2023 e 2024, junto do IFPR Cascavel.</p>
+                <div class="project-details">
+                  <span class="badge bg-primary">Evento</span>
+                  <span class="badge bg-success">2023 </span>
+                  <span class="badge bg-success">2024 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da Direita -->
+        <div class="right-column">
+          <div class="section-heading">
+            <h6>Minha Jornada</h6>
+            <h2>Experiência e Educação</h2>
+          </div>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <h5>Técnico em Informática</h5>
+              <p class="text-muted">IFPR - Campus Cascavel | 2023 - 2025</p>
+              <p>Curso integrado ao Ensino Médio com foco em desenvolvimento de sistemas, banco de dados e programação.</p>
+            </div>
+            
+            <div class="projects">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Iniciação em Robótica</h5>
+                        <p class="card-text">Participação em projeto de robótica educacional no IFPR, desenvolvendo noções básicas de programação de robôs e eletrônica com Arduino. Foi abandonado.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary">Arduino</span>
+                            <span class="badge bg-secondary">Lógica de Programação</span>
+                            <span class="badge bg-success">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+          <div class="section-heading mt-5">
+            <h6>Meus Interesses</h6>
+            <h2>Hobbies e Objetivos</h2>
+          </div>
+          
+          <div class="hobbies">
+            <div class="row">
+              <div class="col-6 mb-3">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <i class="fas fa-gamepad fa-2x mb-2"></i>
+                    <h6>Jogos Digitais</h6>
+                    <p class="small text-muted">Favoritos: Valorant, Minecraft</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-6 mb-3">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <i class="fas fa-code fa-2x mb-2"></i>
+                    <h6>Programação</h6>
+                    <p class="small text-muted">Desenvolvimento Web Front-end</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-6 mb-3">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <i class="fas fa-guitar fa-2x mb-2"></i>
+                    <h6>Música</h6>
+                    <p class="small text-muted">Interesse em aprender guitarra</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-6 mb-3">
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    <i class="fas fa-film fa-2x mb-2"></i>
+                    <h6>Séries e Filmes</h6>
+                    <p class="small text-muted">Fã de ficção científica e fantasia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados. 
+           &nbsp;|&nbsp; 
+           Adaptado por <strong>Ana Luiza - IFPR</strong>
+           &nbsp;|&nbsp;
+           <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

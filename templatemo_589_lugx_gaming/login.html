@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Entrar | LUGX Gaming</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Início</a></li>
+                      <li><a href="shop.html">Nossa Loja</a></li>
+                      <li><a href="detalhes.html">Sobre nós</a></li>
+                      <li><a href="contact.html">Contato</a></li>
+                      <li><a href="login.html" class="active">Entrar</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Entrar na Sua Conta</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-page section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="login-form">
+            <form id="login" action="#" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Seu e-mail cadastrado" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="main-button">Entrar</button>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <div class="login-options">
+                    <a href="recuperar-senha.html">Esqueci minha senha</a>
+                    <span>|</span>
+                    <a href="registro.html">Criar nova conta</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="social-login">
+                    <h5>Ou entre com:</h5>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                    <a href="#" class="google"><i class="fa fa-google"></i> Google</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados. 
+           &nbsp;|&nbsp; 
+           Adaptado por <strong>Ana Luiza</strong>
+           &nbsp;|&nbsp;
+           <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
+        </p>
+      </div>
+    </div>
+</footer>
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  <script>
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('js-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+      }
+    });
+
+    // Fallback - remove o preloader após 3 segundos mesmo se houver algum erro
+    setTimeout(function() {
+      const preloader = document.getElementById('js-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+      }
+    }, 3000);
+  </script>
+</body>
+</html>
