@@ -17,6 +17,47 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Atualiza o contador de itens no header
+    const updateCartCount = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((acc, item) => acc + item.qty, 0);
+      document.getElementById('cart-count').innerText = count;
+    };
+
+    updateCartCount();
+
+    const addToCartBtn = document.getElementById('add-to-cart');
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', function () {
+        const qtyInput = document.querySelector('#qty input');
+        const quantity = parseInt(qtyInput.value);
+
+        if (!isNaN(quantity) && quantity > 0) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+          // Adiciona o novo item
+          cart.push({
+            game: 'Yu-Gi-Oh! GX Tag Force 3',
+            price: 159.90,
+            qty: quantity
+          });
+
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          alert('Produto adicionado ao carrinho!');
+        } else {
+          alert('Quantidade inválida!');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+
+
 <body>
 
   <!-- ***** Header Area Start ***** -->
@@ -30,14 +71,20 @@
                         <img src="assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html">Início</a></li>
                       <li><a href="shop.html">Nossa Loja</a></li>
                       <li><a href="detalhes.html">Sobre nós</a></li>
                       <li><a href="contact.html">Contato</a></li>
                       <li><a href="login.html">Entrar</a></li>
-                  </ul>   
+                      <li>
+                        <a href="carrinho.html">
+                          <i class="fa fa-shopping-cart"></i> Carrinho
+                          <span id="cart-count" style="background:red; color:white; padding:2px 6px; border-radius:10px; font-size:12px;">0</span>
+                        </a>
+                      </li>
+                    </ul>
+                    
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -75,7 +122,8 @@
           <p>Jogo de cartas baseado na série Yu-Gi-Oh! GX com mais de 4.000 cartas disponíveis e modo Tag Duel inovador.</p>
           <form id="qty" action="#">
             <input type="number" class="form-control" value="1" min="1">
-            <button type="submit"><i class="fa fa-shopping-bag"></i> ADICIONAR AO CARRINHO</button>
+            <button type="button" id="add-to-cart"><i class="fa fa-shopping-bag"></i> ADICIONAR AO CARRINHO</button>
+
           </form>
           <ul>
             <li><span>Game ID:</span> YGO-GXTF3</li>

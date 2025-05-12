@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Carrinho de Compras - Lugx Gaming</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -19,9 +18,6 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
-                    </a>
                     <ul class="nav">
                       <li><a href="index.html">Início</a></li>
                       <li><a href="shop.html">Nossa Loja</a></li>
@@ -46,23 +42,11 @@
     </div>
     <div class="text-right mt-4">
       <button class="btn btn-danger" onclick="clearCart()">Limpar Carrinho</button>
-      <button class="btn btn-success ml-2">Finalizar Compra</button>
+      <button class="btn btn-success ml-2" onclick="finishPurchase()">Finalizar Compra</button>
     </div>
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados. 
-           &nbsp;|&nbsp; 
-           Adaptado por <strong>Ana Luiza</strong>
-           &nbsp;|&nbsp;
-           <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-
+ 
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -76,14 +60,20 @@
       // Limpa a lista antes de preencher
       cartList.innerHTML = '';
 
-      cart.forEach(item => {
+      if (cart.length === 0) {
+        cartList.innerHTML = '<li class="list-group-item">Seu carrinho está vazio.</li>';
+      }
+
+      cart.forEach((item, index) => {
         let li = document.createElement('li');
         li.classList.add('list-group-item');
-        li.innerText = `${item.game} - R$${item.price}`;
+        let subtotal = item.price * item.qty;
+        li.innerHTML = `${item.game} (x${item.qty}) - R$${subtotal.toFixed(2)} 
+        <button class="btn btn-sm btn-danger float-right" onclick="removeItem(${index})">Remover</button>`;
         cartList.appendChild(li);
-        totalPrice += parseFloat(item.price);
+        totalPrice += subtotal;
       });
-
+      
       // Atualiza o total
       document.getElementById('total-price').innerText = totalPrice.toFixed(2);
     }
@@ -94,11 +84,39 @@
       loadCart(); // Recarrega a página com o carrinho limpo
     }
 
+    // Função para remover um item do carrinho
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1); // Remove o item
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart(); // Atualiza o carrinho após remoção
+    }
+
+    // Função para finalizar a compra
+    function finishPurchase() {
+      alert('Compra finalizada com sucesso!');
+      // Lógica para finalizar a compra (ex: redirecionamento para uma página de pagamento)
+    }
+
     // Carregar o carrinho ao carregar a página
     window.onload = function() {
       loadCart();
     };
   </script>
 </body>
+
+<footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados. 
+         &nbsp;|&nbsp; 
+         Adaptado por <strong>Ana Luiza</strong>
+         &nbsp;|&nbsp;
+         <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
 
 </html>
